@@ -64,19 +64,29 @@
 
 ---
 
-## 📁 Project structure
+## 📂 Project Structure
 
 ```
-askmydocs/
-├── askmydocs/          # FastAPI backend
-│   ├── main.py
-│   └── ingest.py
-├── frontend/            # React frontend
-├── docs/images/         # Screenshots
-├── README.md
-├── RUN.md
-├── ARCHITECTURE.md
-└── INTERVIEW.md
+ask-my-docs/
+├── 📁 askmydocs/              # FastAPI backend
+│   ├── 📄 main.py             # API routes (/upload, /ask) + CORS + startup
+│   ├── 📄 ingest.py           # Standalone PDF ingestion script
+│   └── 📁 chroma_store/       # Local vector database (generated, gitignored)
+│
+├── 📁 frontend/                # React frontend
+│   ├── 📁 src/
+│   │   ├── 📄 App.js          # Main app logic, chat + upload flow
+│   │   └── 📄 App.css         # Styling
+│   └── 📄 package.json        # Node dependencies
+│
+├── 📁 docs/
+│   └── 📁 images/              # README screenshots
+│
+├── 📄 README.md                # You are here
+├── 📄 RUN.md                   # Setup and run instructions
+├── 📄 ARCHITECTURE.md          # System design, diagrams, decisions
+├── 📄 INTERVIEW.md             # Talking points for discussing this project
+└── 📄 .gitignore
 ```
 
 ---

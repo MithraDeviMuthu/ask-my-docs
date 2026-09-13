@@ -38,8 +38,6 @@ See [RUN.md](./RUN.md) for full setup and run instructions.
 
 ## Project structure
 
-## Project structure
-
 ```
 askmydocs/
 ├── askmydocs/        # FastAPI backend

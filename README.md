@@ -47,11 +47,11 @@ askmydocs/
 └── README.md
 ```
 ## Screenshots
-##Home Page
+        Home Page
 ![Home page](./docs/images/home-page.png)
-##How-it-works
+        How-it-works
 ![How it works](./docs/images/how-it-works.png)
-##Chat-Demo
+        Chat-Demo
 ![Chat demo](./docs/images/chat-demo.png)
-##About Page
+        About Page
 ![About page](./docs/images/about-page.png)

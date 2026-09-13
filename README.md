@@ -46,3 +46,8 @@ askmydocs/
 ├── frontend/          # React frontend
 └── README.md
 ```
+## Screenshots
+
+![Upload screen](./docs/images/upload-screen.png)
+
+![Chat interface](./docs/images/chat-demo.png)

@@ -38,9 +38,13 @@ See [RUN.md](./RUN.md) for full setup and run instructions.
 
 ## Project structure
 
+## Project structure
+
+```
 askmydocs/
-├── askmydocs/ # FastAPI backend
-│ ├── main.py
-│ └── ingest.py
-├── frontend/ # React frontend
+├── askmydocs/        # FastAPI backend
+│   ├── main.py
+│   └── ingest.py
+├── frontend/          # React frontend
 └── README.md
+```

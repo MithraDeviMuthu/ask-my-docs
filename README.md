@@ -8,7 +8,6 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white&labelColor=1a1a1a)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorStore-FF6F00?labelColor=1a1a1a)
 ![Ollama](https://img.shields.io/badge/Ollama-Llama%203-000000?labelColor=1a1a1a)
-![License](https://img.shields.io/badge/License-MIT-yellow?labelColor=1a1a1a)
 
 📄 Upload documents. ❓ Ask questions. 💡 Get instant, context-aware answers — all running **locally** on your machine.
 

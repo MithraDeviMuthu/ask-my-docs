@@ -48,6 +48,10 @@ askmydocs/
 ```
 ## Screenshots
 
-![Upload screen](./docs/images/upload-screen.png)
+![Home page](./docs/images/home-page.png)
 
-![Chat interface](./docs/images/chat-demo.png)
+![How it works](./docs/images/how-it-works.png)
+
+![Chat demo](./docs/images/chat-demo.png)
+
+![About page](./docs/images/about-page.png)

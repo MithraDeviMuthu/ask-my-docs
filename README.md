@@ -1,57 +1,86 @@
-# Ask My Docs
+<div align="center">
 
-AI-powered document Q&A system. Upload a PDF (resume, report, notes — anything), ask questions in plain English, and get answers grounded in the document's actual content.
+# 🤖 Ask My Docs
 
-## Features
+**Chat with your documents like they're sitting across the table.**
 
-- 📄 Upload any PDF and have it indexed instantly
-- 💬 Ask natural-language questions and get grounded answers
-- 🔍 Retrieval-Augmented Generation (RAG) — answers are backed by real document content, not guesses
-- 🖥️ Runs entirely locally using Ollama — no API keys, no cost, no data leaving your machine
-- 📎 Source-aware — every answer notes which document it came from
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&labelColor=20232A)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white&labelColor=1a1a1a)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorStore-FF6F00?labelColor=1a1a1a)
+![Ollama](https://img.shields.io/badge/Ollama-Llama%203-000000?labelColor=1a1a1a)
+![License](https://img.shields.io/badge/License-MIT-yellow?labelColor=1a1a1a)
 
-## Tech stack
+📄 Upload documents. ❓ Ask questions. 💡 Get instant, context-aware answers — all running **locally** on your machine.
 
-| Layer | Technology |
-|---|---|
-| Frontend | React |
-| Backend | FastAPI (Python) |
-| Embeddings | sentence-transformers (all-MiniLM-L6-v2) |
-| Vector store | ChromaDB |
-| LLM | Ollama (Llama 3, running locally) |
-| PDF parsing | pypdf |
+</div>
 
-## How it works
+---
 
-1. A PDF is uploaded and its text is extracted
-2. The text is split into overlapping chunks
-3. Each chunk is converted into a vector embedding
-4. Embeddings are stored in a local ChromaDB vector database
-5. When a question is asked, it's embedded and matched against the most relevant chunks
-6. The matched chunks + question are sent to a local LLM (Llama 3 via Ollama), which generates a grounded answer
+## ✨ Features
 
-See [ARCHITECTURE.md](./ARCHITECTURE.md) for a deeper breakdown.
+| | Feature | Description |
+|---|---|---|
+| 🔍 | **RAG-based QA** | Retrieves contextually relevant answers using Retrieval-Augmented Generation |
+| 🧠 | **Local LLM integration** | Uses Ollama (Llama 3) for private, on-device inference — no API key, no cost |
+| 📌 | **Vector search** | ChromaDB embeddings-based similarity search over document chunks |
+| 💬 | **Interactive chat UI** | Clean React conversational interface with example question chips |
+| 📎 | **Source-aware answers** | Every answer notes which uploaded document it came from |
+| 🔒 | **Fully private** | Documents and answers never leave your machine |
 
-## Getting started
+---
 
-See [RUN.md](./RUN.md) for full setup and run instructions.
+## 🖼️ Screenshots
 
-## Project structure
+### 🏠 Home
+![Home page](./docs/images/home-page.png)
+
+### ⚙️ How it works
+![How it works](./docs/images/how-it-works.png)
+
+### 💬 Chat demo
+![Chat demo](./docs/images/chat-demo.png)
+
+### ℹ️ About
+![About page](./docs/images/about-page.png)
+
+---
+
+## 🧩 How it works
+
+1. 📤 A PDF is uploaded and its text is extracted
+2. ✂️ The text is split into overlapping chunks
+3. 🔢 Each chunk is converted into a vector embedding
+4. 🗄️ Embeddings are stored in a local ChromaDB vector database
+5. ❓ When a question is asked, it's embedded and matched against the most relevant chunks
+6. 🤖 The matched chunks + question are sent to Llama 3 (via Ollama), which generates a grounded answer
+
+📖 See [ARCHITECTURE.md](./ARCHITECTURE.md) for diagrams and a deeper breakdown.
+
+---
+
+## 🚀 Getting started
+
+📖 See [RUN.md](./RUN.md) for full setup and run instructions.
+
+---
+
+## 📁 Project structure
 
 ```
 askmydocs/
-├── askmydocs/        # FastAPI backend
+├── askmydocs/          # FastAPI backend
 │   ├── main.py
 │   └── ingest.py
-├── frontend/          # React frontend
-└── README.md
+├── frontend/            # React frontend
+├── docs/images/         # Screenshots
+├── README.md
+├── RUN.md
+├── ARCHITECTURE.md
+└── INTERVIEW.md
 ```
-## Screenshots
-        Home Page
-![Home page](./docs/images/home-page.png)
-        How-it-works
-![How it works](./docs/images/how-it-works.png)
-        Chat-Demo
-![Chat demo](./docs/images/chat-demo.png)
-        About Page
-![About page](./docs/images/about-page.png)
+
+---
+
+## 📄 License
+
+MIT

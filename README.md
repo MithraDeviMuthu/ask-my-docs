@@ -8,7 +8,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white&labelColor=1a1a1a)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorStore-FF6F00?labelColor=1a1a1a)
 ![Ollama](https://img.shields.io/badge/Ollama-Llama%203-000000?labelColor=1a1a1a)
-
+![License](https://img.shields.io/badge/License-MIT-yellow?labelColor=1a1a1a)
 
 📄 Upload documents. ❓ Ask questions. 💡 Get instant, context-aware answers — all running **locally** on your machine.
 
@@ -45,6 +45,64 @@
 
 ---
 
+## 🛠️ Installation
+
+### Prerequisites
+
+- Python 3.10+
+- Node.js 18+
+- [Ollama](https://ollama.com) installed and running
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/MithraDeviMuthu/ask-my-docs.git
+cd ask-my-docs
+```
+
+### 2. Set up the backend
+
+```bash
+cd askmydocs
+python -m venv venv
+venv\Scripts\activate        # Windows
+# source venv/bin/activate   # macOS/Linux
+
+pip install fastapi uvicorn pypdf chromadb sentence-transformers ollama python-multipart
+```
+
+### 3. Pull the local model
+
+```bash
+ollama pull llama3
+```
+
+### 4. Start the backend
+
+```bash
+python -m uvicorn main:app --reload
+```
+
+Runs at `http://localhost:8000`
+
+### 5. Set up the frontend (new terminal)
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Runs at `http://localhost:3000`
+
+### 6. Use it
+
+Open the frontend in your browser, upload a PDF, and start asking questions. 🎉
+
+📖 Full setup details, troubleshooting, and environment notes are in [RUN.md](./RUN.md).
+
+---
+
 ## 🧩 How it works
 
 1. 📤 A PDF is uploaded and its text is extracted
@@ -55,12 +113,6 @@
 6. 🤖 The matched chunks + question are sent to Llama 3 (via Ollama), which generates a grounded answer
 
 📖 See [ARCHITECTURE.md](./ARCHITECTURE.md) for diagrams and a deeper breakdown.
-
----
-
-## 🚀 Getting started
-
-📖 See [RUN.md](./RUN.md) for full setup and run instructions.
 
 ---
 

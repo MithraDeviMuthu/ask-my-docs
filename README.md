@@ -37,3 +37,10 @@ See [ARCHITECTURE.md](./ARCHITECTURE.md) for a deeper breakdown.
 See [RUN.md](./RUN.md) for full setup and run instructions.
 
 ## Project structure
+
+askmydocs/
+├── askmydocs/ # FastAPI backend
+│ ├── main.py
+│ └── ingest.py
+├── frontend/ # React frontend
+└── README.md
